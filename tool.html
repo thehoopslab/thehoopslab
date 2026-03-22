@@ -50,11 +50,6 @@
   .next-btn { background: var(--orange); color: var(--white); padding: 0.9rem 2.5rem; border: none; border-radius: 4px; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; font-family: 'Barlow', sans-serif; transition: background 0.2s; }
   .next-btn:hover { background: var(--orange-light); }
 
-  .zip-wrap { margin-bottom: 1.5rem; }
-  .zip-input { width: 100%; padding: 0.9rem 1rem; background: var(--dark2); border: 1px solid var(--dark3); border-radius: 8px; color: var(--white); font-size: 1rem; font-family: 'Barlow', sans-serif; transition: border-color 0.2s; }
-  .zip-input:focus { outline: none; border-color: var(--orange); }
-  .zip-error { font-size: 12px; color: #F09595; margin-top: 6px; display: none; }
-
   /* RESULTS */
   .results-header { margin-bottom: 2rem; }
   .results-header h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 2.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 0.5rem; }
@@ -64,46 +59,38 @@
   .summary-chip { background: var(--dark2); border: 1px solid var(--dark3); border-radius: 20px; padding: 6px 16px; font-size: 12px; font-weight: 600; color: var(--gray-light); }
   .summary-chip span { color: var(--orange); }
 
-  .module-card { background: var(--dark2); border: 1px solid var(--dark3); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; position: relative; overflow: hidden; }
-  .module-card.free { border-color: var(--orange); }
-  .module-card.locked { opacity: 0.85; }
-  .module-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1rem; gap: 1rem; }
-  .module-left { flex: 1; }
-  .module-badge-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
-  .m-tag { font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 600; }
-  .tag-ball { background: rgba(250,174,58,0.15); color: #FAC775; }
-  .tag-shooting { background: rgba(55,138,221,0.15); color: #85B7EB; }
-  .tag-defense { background: rgba(226,75,74,0.15); color: #F09595; }
-  .tag-iq { background: rgba(127,119,221,0.15); color: #AFA9EC; }
-  .tag-conditioning { background: rgba(99,153,34,0.15); color: #97C459; }
-  .diff-badge { font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 600; }
-  .diff-beginner { background: rgba(99,153,34,0.15); color: #97C459; }
-  .diff-intermediate { background: rgba(186,117,23,0.15); color: #FAC775; }
-  .diff-advanced { background: rgba(226,75,74,0.15); color: #F09595; }
-  .module-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 800; text-transform: uppercase; }
-  .module-price-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; font-weight: 900; color: var(--orange); white-space: nowrap; }
-  .module-price-tag.free-tag { color: #63991A; }
-  .module-desc { font-size: 0.875rem; color: var(--gray); line-height: 1.7; margin-bottom: 1.25rem; }
-
+  /* FREE TRIAL CARD */
+  .trial-card { background: var(--dark2); border: 2px solid var(--orange); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
+  .trial-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem; }
+  .trial-badge { background: var(--orange); color: var(--white); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; }
+  .trial-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; font-weight: 900; text-transform: uppercase; margin-bottom: 0.4rem; }
+  .trial-price { font-family: 'Barlow Condensed', sans-serif; font-size: 1.8rem; font-weight: 900; color: #63991A; }
+  .trial-desc { font-size: 0.875rem; color: var(--gray-light); line-height: 1.7; margin-bottom: 1.25rem; }
   .drills-label { font-size: 11px; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
   .drill-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
   .drill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); margin-top: 5px; flex-shrink: 0; }
   .drill-name { font-size: 13px; font-weight: 600; color: var(--white); }
   .drill-detail { font-size: 12px; color: var(--gray); margin-top: 2px; }
 
-  .locked-overlay { background: rgba(20,20,20,0.6); border-radius: 8px; padding: 1.25rem; text-align: center; margin-top: 1rem; border: 1px dashed var(--dark3); }
-  .locked-icon { font-size: 1.5rem; margin-bottom: 8px; }
-  .locked-title { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+  /* LOCKED MODULE CARDS */
+  .module-card { background: var(--dark2); border: 1px solid var(--dark3); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
+  .module-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 0.75rem; gap: 1rem; }
+  .module-num-tag { font-size: 11px; font-weight: 700; color: var(--orange); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+  .module-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 800; text-transform: uppercase; }
+  .module-price-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; font-weight: 900; color: var(--orange); white-space: nowrap; }
+  .module-desc { font-size: 0.875rem; color: var(--gray); line-height: 1.7; margin-bottom: 1rem; }
+  .locked-overlay { background: rgba(20,20,20,0.5); border-radius: 8px; padding: 1.25rem; text-align: center; border: 1px dashed var(--dark3); }
+  .locked-icon { font-size: 1.25rem; margin-bottom: 6px; }
+  .locked-title { font-size: 0.9rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
   .locked-sub { font-size: 0.8rem; color: var(--gray); margin-bottom: 1rem; }
   .coming-btn { display: inline-block; background: var(--dark3); color: var(--gray); padding: 0.6rem 1.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid var(--dark3); cursor: default; }
 
-  .inperson-card { background: var(--dark2); border: 2px solid var(--orange); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
-  .inperson-card.outside { border-color: var(--dark3); }
+  /* IN PERSON */
+  .inperson-card { background: var(--dark2); border: 1px solid var(--dark3); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
   .inperson-header { display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem; }
   .inperson-tag { font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 600; background: rgba(244,100,10,0.15); color: var(--orange-light); }
   .inperson-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 800; text-transform: uppercase; }
   .inperson-desc { font-size: 0.875rem; color: var(--gray-light); line-height: 1.6; margin-bottom: 1.25rem; }
-
   .cf-group { margin-bottom: 1rem; }
   .cf-group label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); margin-bottom: 5px; }
   .cf-group input, .cf-group textarea { width: 100%; padding: 0.75rem 1rem; background: var(--dark3); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: var(--white); font-size: 0.9rem; font-family: 'Barlow', sans-serif; transition: border-color 0.2s; }
@@ -113,6 +100,7 @@
   .cf-submit:hover { background: var(--orange-light); }
   .cf-success { background: rgba(99,153,34,0.1); border: 1px solid rgba(99,153,34,0.3); border-radius: 6px; padding: 1rem; text-align: center; color: #97C459; font-size: 0.9rem; display: none; margin-top: 0.5rem; }
 
+  /* BUNDLE */
   .bundle-cta { background: linear-gradient(135deg, var(--dark2), var(--dark)); border: 1px solid rgba(244,100,10,0.3); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
   .bundle-cta-left h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 900; text-transform: uppercase; margin-bottom: 4px; }
   .bundle-cta-left p { font-size: 0.8rem; color: var(--gray-light); line-height: 1.5; }
@@ -143,15 +131,14 @@
   <div class="page-header">
     <div class="page-badge">Personalized Training</div>
     <h1 class="page-title">Find Your <span>Package</span></h1>
-    <p class="page-sub">Answer 5 quick questions and get a training package built specifically for your game.</p>
+    <p class="page-sub">Answer 4 quick questions and get a training package built specifically for your game — starting with a free trial module.</p>
   </div>
 
   <div class="progress-wrap">
-    <div class="progress-label" id="prog-label">Step 1 of 5</div>
-    <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width:20%"></div></div>
+    <div class="progress-label" id="prog-label">Step 1 of 4</div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width:25%"></div></div>
   </div>
 
-  <!-- STEP 1: POSITION -->
   <div class="step active" id="step-1">
     <div class="q-title">What position do you play?</div>
     <div class="q-sub">Your position shapes the foundation of your entire training plan.</div>
@@ -165,7 +152,6 @@
     <button class="next-btn" onclick="go(2)">Next →</button>
   </div>
 
-  <!-- STEP 2: LEVEL -->
   <div class="step" id="step-2">
     <div class="q-title">What's your skill level?</div>
     <div class="q-sub">Be honest — the right drills for your level make all the difference.</div>
@@ -177,7 +163,6 @@
     <button class="next-btn" onclick="go(3)">Next →</button>
   </div>
 
-  <!-- STEP 3: GOAL -->
   <div class="step" id="step-3">
     <div class="q-title">What's your main goal?</div>
     <div class="q-sub">Your goal determines the focus and intensity of your training.</div>
@@ -190,7 +175,6 @@
     <button class="next-btn" onclick="go(4)">Next →</button>
   </div>
 
-  <!-- STEP 4: DAYS -->
   <div class="step" id="step-4">
     <div class="q-title">How many days can you train?</div>
     <div class="q-sub">This helps us set the right volume and intensity for your schedule.</div>
@@ -199,45 +183,54 @@
       <button class="option-btn" onclick="pick(this,'days','3-4 days')"><span class="option-icon">📅</span><span class="option-label">3-4 days</span><span class="option-sub">Moderate schedule</span></button>
       <button class="option-btn" onclick="pick(this,'days','5+ days')"><span class="option-icon">📅</span><span class="option-label">5+ days</span><span class="option-sub">Full commitment</span></button>
     </div>
-    <button class="next-btn" onclick="go(5)">Next →</button>
+    <button class="next-btn" onclick="showResults()">Get my training package →</button>
   </div>
 
-  <!-- STEP 5: IN PERSON -->
-  <div class="step" id="step-5">
-    <div class="q-title">Want in-person training?</div>
-    <div class="q-sub">1-on-1 sessions are available within 50 miles of Mooresville, NC.</div>
-    <div class="option-grid">
-      <button class="option-btn" onclick="pick(this,'inperson','Yes')"><span class="option-icon">🏟️</span><span class="option-label">Yes!</span><span class="option-sub">I want in-person sessions</span></button>
-      <button class="option-btn" onclick="pick(this,'inperson','No')"><span class="option-icon">💻</span><span class="option-label">No thanks</span><span class="option-sub">Self-guided is fine</span></button>
-    </div>
-    <div class="zip-wrap" id="zip-wrap" style="display:none;">
-      <div class="q-sub" style="margin-bottom:10px;">Enter your zip code to check if you're in range:</div>
-      <input class="zip-input" type="text" id="zip-in" placeholder="e.g. 28117" maxlength="5" />
-      <div class="zip-error" id="zip-err">Please enter a valid 5-digit zip code.</div>
-    </div>
-    <button class="next-btn" onclick="handleFinal()">Get my training package →</button>
-  </div>
-
-  <!-- RESULTS -->
   <div class="step" id="step-results">
     <div class="results-header">
       <h2>Your Training Package</h2>
-      <p>Based on your answers, here's your personalized plan. Your first module is free — no strings attached.</p>
+      <p>Here's your personalized plan. Start with your free trial module — then unlock the full program when you're ready.</p>
     </div>
     <div class="summary-row" id="summary-row"></div>
-    <div id="inperson-block"></div>
+
+    <!-- FREE TRIAL MODULE -->
+    <div class="trial-card" id="trial-block"></div>
+
+    <!-- LOCKED MODULES -->
     <div id="modules-block"></div>
+
+    <!-- IN PERSON -->
+    <div class="inperson-card" style="margin-top:1rem;">
+      <div class="inperson-header">
+        <span class="inperson-tag">in-person</span>
+        <div class="inperson-title">Train with a coach</div>
+      </div>
+      <p class="inperson-desc">Want real-time feedback and hands-on coaching? Book a 1-on-1 in-person session with a dedicated coach — personalized to your position, skill level, and goals.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;flex-wrap:wrap;gap:0.5rem;">
+        <div style="font-size:0.85rem;color:var(--gray-light);">45-60 min session &nbsp;·&nbsp; All skill levels &nbsp;·&nbsp; 7 days a week</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.8rem;font-weight:900;color:var(--orange);">$100 <span style="font-size:0.9rem;color:var(--gray);font-family:'Barlow',sans-serif;font-weight:400;">/ session</span></div>
+      </div>
+      <div class="cf-group"><label>Your name</label><input type="text" placeholder="First and last name"/></div>
+      <div class="cf-group"><label>Email</label><input type="email" placeholder="your@email.com"/></div>
+      <div class="cf-group"><label>Phone (optional)</label><input type="tel" placeholder="(555) 000-0000"/></div>
+      <div class="cf-group"><label>Tell me about your goals</label><textarea placeholder="Position, skill level, what you're working toward..."></textarea></div>
+      <button class="cf-submit" onclick="this.style.display='none';document.getElementById('cf-ok').style.display='block'">Book a session →</button>
+      <div class="cf-success" id="cf-ok">You're all set! I'll be in touch within 24 hours to get you scheduled. 🏀</div>
+    </div>
+
+    <!-- BUNDLE -->
     <div class="bundle-cta">
       <div class="bundle-cta-left">
         <h4>Get all 3 modules</h4>
         <p>Your complete training system — position, skill level, and goal modules in one bundle.</p>
-        <div class="coming-btn" style="margin-top:10px; display:inline-block;">Coming Soon</div>
+        <div class="coming-btn" style="margin-top:10px;display:inline-block;">Coming Soon</div>
       </div>
       <div class="bundle-cta-right">
-        <div class="bundle-price">$25</div>
-        <div class="bundle-save">Save $5 vs. individual</div>
+        <div class="bundle-price">$50</div>
+        <div class="bundle-save">Save $25 vs. individual</div>
       </div>
     </div>
+
     <button class="restart-btn" onclick="restart()">← Start over</button>
   </div>
 </div>
@@ -245,112 +238,32 @@
 <script>
 const A = {};
 
-const zipDB = {
-  '28117':{lat:35.5849,lng:-80.8095},'28115':{lat:35.5738,lng:-80.8434},
-  '28134':{lat:35.3579,lng:-80.8776},'28027':{lat:35.3885,lng:-80.6207},
-  '28025':{lat:35.3885,lng:-80.5493},'28078':{lat:35.4646,lng:-80.8501},
-  '28031':{lat:35.4985,lng:-80.8887},'28036':{lat:35.5085,lng:-80.7537},
-  '28023':{lat:35.7060,lng:-80.4326},'28081':{lat:35.3793,lng:-80.6882},
-  '28083':{lat:35.3571,lng:-80.6398},'28075':{lat:35.4554,lng:-80.6415},
-  '28269':{lat:35.3637,lng:-80.7965},'28216':{lat:35.2891,lng:-80.8776},
-  '28270':{lat:35.1043,lng:-80.7765},'28277':{lat:35.0535,lng:-80.7651},
-  '28202':{lat:35.2271,lng:-80.8431},'28203':{lat:35.2113,lng:-80.8567},
-  '28204':{lat:35.2226,lng:-80.8226},'28205':{lat:35.2337,lng:-80.8065},
-  '28146':{lat:35.6715,lng:-80.4798},'28144':{lat:35.6979,lng:-80.4445},
-  '28147':{lat:35.6404,lng:-80.5404},'28166':{lat:35.7610,lng:-80.8762},
-  '28677':{lat:35.7357,lng:-80.8840},'27265':{lat:35.9554,lng:-79.9960},
-  '27282':{lat:36.0635,lng:-79.9160},'27401':{lat:36.0726,lng:-79.7920},
-  '27403':{lat:36.0543,lng:-79.8148},'28086':{lat:35.2571,lng:-81.3737},
-  '28092':{lat:35.4560,lng:-81.2493},'28645':{lat:35.9760,lng:-81.5343},
-  '28117':{lat:35.5849,lng:-80.8095},'28110':{lat:35.2154,lng:-80.6815},
-  '28104':{lat:35.1307,lng:-80.6554},'28105':{lat:35.2043,lng:-80.7265},
-  '28173':{lat:34.9682,lng:-80.7415},'28112':{lat:34.9932,lng:-80.5537},
+const TRIAL_DRILLS = {
+  'Point Guard':[{n:'Two-ball dribbling',d:'3 sets x 30 sec — alternate hands, eyes up, stay low'},{n:'Push-pull crossover',d:'2 sets x 20 reps — sharp change of direction, protect the ball'},{n:'Full-court layup finish',d:'5 reps each hand — drive full speed, finish strong at the rim'}],
+  'Shooting Guard':[{n:'Spot shooting',d:'3 spots x 5 reps — catch, set feet, shoot with consistent form'},{n:'One-dribble pull-up',d:'2 sets x 10 — one hard dribble left and right, rise into shot'},{n:'Off-screen curl',d:'5 reps each side — curl off a cone, catch, shoot in rhythm'}],
+  'Small Forward':[{n:'Wing closeout drill',d:'10 reps — sprint from help position, closeout under control'},{n:'Drive & kick read',d:'5 reps each side — attack baseline, read kick to corner'},{n:'Midrange face-up',d:'3 spots x 4 reps — jab step, create space, pull up'}],
+  'Power Forward':[{n:'Drop step finish',d:'5 reps each side — catch in post, drop step, power finish'},{n:'Face-up jab & drive',d:'10 reps — catch at elbow, jab step, attack middle'},{n:'Pop-to-three',d:'5 reps — set screen, pop to arc, catch and shoot'}],
+  'Center':[{n:'Mikan drill',d:'3 sets x 10 — alternating layups off glass, no dribble'},{n:'Box out & chin it',d:'10 reps — box out a partner, grab the rebound, chin the ball'},{n:'Rim runs',d:'5 reps — catch entry pass, one power dribble, go strong to rim'}]
 };
 
-const MC = {lat:35.5849,lng:-80.8095};
-function rad(d){return d*Math.PI/180;}
-function dist(a,b){
-  const R=3958.8, dL=rad(b.lat-a.lat), dG=rad(b.lng-a.lng);
-  const x=Math.sin(dL/2)**2+Math.cos(rad(a.lat))*Math.cos(rad(b.lat))*Math.sin(dG/2)**2;
-  return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
-}
-
-const MODS = {
-  position:{
-    'Point Guard':{title:'Point Guard Mastery',tag:'ball',tagClass:'tag-ball',diff:'Intermediate',diffClass:'diff-intermediate',desc:'Elite ball handling, court vision, pick-and-roll execution, and running the offense under pressure.',drills:[{n:'Two-ball dribbling',d:'3 sets x 60 sec — alternate hands while moving full court'},{n:'Pick-and-roll reads',d:'10 reps each side — pocket pass vs. pull-up decision'},{n:'Full-court speed dribble',d:'5 reps — explode coast to coast with a controlled finish'}]},
-    'Shooting Guard':{title:'Off-Ball Movement & Shooting',tag:'shooting',tagClass:'tag-shooting',diff:'Intermediate',diffClass:'diff-intermediate',desc:'Catch-and-shoot mechanics, creating space off screens, and pull-up jumper development.',drills:[{n:'Curl & catch shooting',d:'5 spots x 5 reps — curl off a chair or cone, catch, shoot'},{n:'Pin-down screen reads',d:'10 reps — read the defense: curl, flare, or fade'},{n:'Pull-up off the dribble',d:'3 sets x 10 — one dribble pull-up from each wing'}]},
-    'Small Forward':{title:'Two-Way Wing Development',tag:'defense',tagClass:'tag-defense',diff:'Advanced',diffClass:'diff-advanced',desc:'Versatile offense from the mid-range and three, plus on-ball and help-side defensive positioning.',drills:[{n:'Closeout into contest',d:'10 reps — sprint closeout, break down, contest without fouling'},{n:'Drive & kick series',d:'5 reps each side — attack, read help, kick to corner'},{n:'Defensive slide circuit',d:'4 sets x 30 sec — defensive stance slides, no crossing feet'}]},
-    'Power Forward':{title:'High-Low & Face-Up Game',tag:'iq',tagClass:'tag-iq',diff:'Intermediate',diffClass:'diff-intermediate',desc:'Post fundamentals, face-up drives, pick-and-pop spacing, and reading high-low opportunities.',drills:[{n:'Drop step finish',d:'5 reps each side — catch in post, drop step, strong finish'},{n:'Face-up drive series',d:'10 reps — catch high, jab step, drive middle or baseline'},{n:'Pick-and-pop spacing',d:'5 spots x 4 reps — set screen, pop to three, catch and shoot'}]},
-    'Center':{title:'Post Dominance & Rim Protection',tag:'conditioning',tagClass:'tag-conditioning',diff:'Beginner',diffClass:'diff-beginner',desc:'Footwork in the post, drop step, sealing, shot-blocking timing, and rebounding positioning.',drills:[{n:'Mikan drill',d:'3 sets x 20 reps — alternating layups off the backboard, no dribble'},{n:'Box out & secure',d:'10 reps — box out partner, jump to ball, chin it strong'},{n:'Shot-block timing',d:'10 reps — wait for shooter to leave ground, block without fouling'}]}
-  },
-  level:{
-    'Beginner':{title:'Fundamentals Bootcamp',tag:'ball',tagClass:'tag-ball',diff:'Beginner',diffClass:'diff-beginner',desc:'Stance, footwork, passing, and basic dribbling — the building blocks every player needs before advancing.',drills:[{n:'Stationary dribbling',d:'3 sets x 45 sec each hand — waist high, eyes up'},{n:'Chest & bounce pass',d:'3 sets x 10 each — wrist snap and accuracy focus'},{n:'Triple threat stance',d:'5 min — hold position, practice jab steps both directions'}]},
-    'Intermediate':{title:'Shooting Mechanics & Consistency',tag:'shooting',tagClass:'tag-shooting',diff:'Intermediate',diffClass:'diff-intermediate',desc:'Form shooting progression, catch-and-shoot reps, and mid-range game development.',drills:[{n:'Form shooting',d:'50 reps close range — one hand, arc and follow-through focus'},{n:'Elbow mid-range',d:'5 spots x 5 reps — catch, set, shoot with consistent footwork'},{n:'3-point catch & shoot',d:'5 spots x 4 reps — no dribble, quick release off the catch'}]},
-    'Advanced':{title:'Advanced Skill Combinations',tag:'iq',tagClass:'tag-iq',diff:'Advanced',diffClass:'diff-advanced',desc:'Chaining moves together — hesitation into pull-up, euro step finishes, and reading defensive rotations.',drills:[{n:'Hesitation pull-up',d:'5 reps each side — sell the drive, hesi, rise into pull-up'},{n:'Euro step finish',d:'10 reps each side — two-step gather, finish opposite hand'},{n:'Read & react 3-man',d:'15 min — live reads on drive, kick, move sequences'}]}
-  },
-  goal:{
-    'Make the team':{title:'Tryout Preparation',tag:'defense',tagClass:'tag-defense',diff:'Intermediate',diffClass:'diff-intermediate',desc:'Hustle plays, communication, defensive intensity, and coachability — what coaches actually look for at tryouts.',drills:[{n:'Charge taking drill',d:'10 reps — establish position early, take the contact'},{n:'Loose ball scramble',d:'5 reps — dive, secure, outlet — show effort every time'},{n:'Shell defense',d:'10 min — rotate, communicate, recover — no ball watching'}]},
-    'Improve my skills':{title:'IQ & Decision Making',tag:'iq',tagClass:'tag-iq',diff:'Intermediate',diffClass:'diff-intermediate',desc:'Reading defenses, recognizing mismatch opportunities, and making faster, smarter decisions with the ball.',drills:[{n:'Reaction passing',d:'10 min — partner points to target, passer reads and delivers'},{n:'3-second decision drill',d:'10 reps — catch, scan, decide within 3 seconds, no holding'},{n:'Film review',d:'20 min — watch your own footage, identify one decision to fix'}]},
-    'Play at next level':{title:'Elite Athleticism & Film Study',tag:'conditioning',tagClass:'tag-conditioning',diff:'Advanced',diffClass:'diff-advanced',desc:'Vertical jump training, first-step quickness, and breaking down film to understand the game at a higher level.',drills:[{n:'Depth jumps',d:'4 sets x 6 reps — step off box, land, explode immediately'},{n:'First-step burst',d:'6 reps each direction — on signal, explode 3 steps, brake hard'},{n:'Pro film breakdown',d:'20 min — study your position at next level, pick one move to add'}]},
-    'Stay in shape':{title:'Basketball Conditioning Circuit',tag:'conditioning',tagClass:'tag-conditioning',diff:'Beginner',diffClass:'diff-beginner',desc:'Full-court sprints, agility ladders, and skill-based drills that keep you game-ready year round.',drills:[{n:'Suicide sprints',d:'5 reps — touch each line, full effort, rest 45 sec between'},{n:'Agility ladder',d:'3 patterns x 4 reps — in-out, lateral, single foot'},{n:'Continuous layups',d:'5 min — keep ball moving, alternate sides, no stopping'}]}
-  }
+const LOCKED = {
+  position:{title:'Position Module',desc:'A complete drill library built for your position — full sets, reps, coaching cues, and a 4-week training schedule.'},
+  level:{title:'Skill Level Module',desc:'Drills matched exactly to where you are — progressions, milestones, and a development plan tailored to your level.'},
+  goal:{title:'Goal Module',desc:'Focused training around your specific goal — tryout prep, next-level athleticism, or staying game-ready year round.'}
 };
 
 function pick(btn,key,val){
   btn.closest('.option-grid').querySelectorAll('.option-btn').forEach(b=>b.classList.remove('selected'));
   btn.classList.add('selected');
   A[key]=val;
-  if(key==='inperson') document.getElementById('zip-wrap').style.display=val==='Yes'?'block':'none';
 }
 
 function go(n){
   document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
   document.getElementById('step-'+n).classList.add('active');
-  document.getElementById('prog-label').textContent='Step '+n+' of 5';
-  document.getElementById('prog-fill').style.width=(n*20)+'%';
+  document.getElementById('prog-label').textContent='Step '+n+' of 4';
+  document.getElementById('prog-fill').style.width=(n*25)+'%';
   window.scrollTo({top:0,behavior:'smooth'});
-}
-
-function handleFinal(){
-  if(A.inperson==='Yes'){
-    const zip=document.getElementById('zip-in').value.trim();
-    const err=document.getElementById('zip-err');
-    if(!/^\d{5}$/.test(zip)){err.style.display='block';return;}
-    err.style.display='none';
-    const c=zipDB[zip];
-    A.zip=zip;
-    A.qualifies=c?dist(MC,c)<=50:false;
-  }
-  showResults();
-}
-
-function renderDrills(drills){
-  return drills.map(d=>`<div class="drill-row"><div class="drill-dot"></div><div><div class="drill-name">${d.n}</div><div class="drill-detail">${d.d}</div></div></div>`).join('');
-}
-
-function renderModule(m,isFree,num){
-  const priceHtml=isFree
-    ?`<div class="module-price-tag free-tag">Free <span style="font-size:0.8rem;color:var(--gray);font-family:'Barlow',sans-serif;font-weight:400;">/ yours to keep</span></div>`
-    :`<div class="module-price-tag">$10 <span style="font-size:0.8rem;color:var(--gray);font-family:'Barlow',sans-serif;font-weight:400;">/ module</span></div>`;
-  const drillsHtml=isFree
-    ?`<div class="drills-label">Your drills</div>${renderDrills(m.drills)}`
-    :`<div class="locked-overlay"><div class="locked-icon">🔒</div><div class="locked-title">Module ${num} — Unlock to access</div><div class="locked-sub">Purchase this module to get your full drill library, sets, reps, and weekly schedule.</div><div class="coming-btn">Coming Soon — $10</div></div>`;
-  return `
-    <div class="module-card ${isFree?'free':'locked'}">
-      <div class="module-top">
-        <div class="module-left">
-          <div class="module-badge-row">
-            <span class="m-tag ${m.tagClass}">${m.tag}</span>
-            <span class="diff-badge ${m.diffClass}">${m.diff}</span>
-            <span style="font-size:11px;color:var(--gray);">Module ${num}</span>
-          </div>
-          <div class="module-title">${m.title}</div>
-        </div>
-        ${priceHtml}
-      </div>
-      <div class="module-desc">${m.desc}</div>
-      ${drillsHtml}
-    </div>`;
 }
 
 function showResults(){
@@ -364,45 +277,44 @@ function showResults(){
     `<div class="summary-chip">Position: <span>${A.position||'—'}</span></div>`,
     `<div class="summary-chip">Level: <span>${A.level||'—'}</span></div>`,
     `<div class="summary-chip">Goal: <span>${A.goal||'—'}</span></div>`,
-    `<div class="summary-chip">Days: <span>${A.days||'—'}</span></div>`
+    `<div class="summary-chip">Days/week: <span>${A.days||'—'}</span></div>`
   ].join('');
 
-  const ip=document.getElementById('inperson-block');
-  if(A.inperson==='Yes'){
-    if(A.qualifies){
-      ip.innerHTML=`<div class="inperson-card">
-        <div class="inperson-header"><span class="inperson-tag">in-person</span><div class="inperson-title">You qualify for 1-on-1 training!</div></div>
-        <p class="inperson-desc">You're within range of Mooresville, NC. Fill out the form below and I'll be in touch to schedule your first session.</p>
-        <div class="cf-group"><label>Your name</label><input type="text" id="cf-n" placeholder="First and last name"/></div>
-        <div class="cf-group"><label>Email</label><input type="email" id="cf-e" placeholder="your@email.com"/></div>
-        <div class="cf-group"><label>Phone (optional)</label><input type="tel" id="cf-p" placeholder="(555) 000-0000"/></div>
-        <div class="cf-group"><label>Tell me about your goals</label><textarea id="cf-m" placeholder="Position, skill level, what you're working toward..."></textarea></div>
-        <button class="cf-submit" onclick="this.style.display='none';document.getElementById('cf-ok').style.display='block'">Send message →</button>
-        <div class="cf-success" id="cf-ok">You're all set! I'll be in touch within 24 hours to get you scheduled. 🏀</div>
-      </div>`;
-    } else {
-      ip.innerHTML=`<div class="inperson-card outside">
-        <div class="inperson-header"><span class="inperson-tag" style="background:rgba(255,255,255,0.05);color:var(--gray);">location</span><div class="inperson-title">Outside training area</div></div>
-        <p class="inperson-desc">Zip code ${A.zip} is outside the 50-mile radius from Mooresville, NC. Your self-guided modules below have everything you need to get to work!</p>
-      </div>`;
-    }
-  } else { ip.innerHTML=''; }
+  const drills = TRIAL_DRILLS[A.position||'Point Guard'];
+  const drillsHtml = drills.map(d=>`<div class="drill-row"><div class="drill-dot"></div><div><div class="drill-name">${d.n}</div><div class="drill-detail">${d.d}</div></div></div>`).join('');
 
-  const mb=document.getElementById('modules-block');
-  const pm=MODS.position[A.position||'Point Guard'];
-  const lm=MODS.level[A.level||'Beginner'];
-  const gm=MODS.goal[A.goal||'Improve my skills'];
-  mb.innerHTML=renderModule(pm,true,1)+renderModule(lm,false,2)+renderModule(gm,false,3);
+  document.getElementById('trial-block').innerHTML=`
+    <div class="trial-header">
+      <div><span class="trial-badge">Free Trial</span><div class="trial-title" style="margin-top:8px;">Your Sample Training Module</div></div>
+      <div class="trial-price">Free</div>
+    </div>
+    <p class="trial-desc">Here's a taste of The Hoops Lab — 3 drills built for a <strong>${A.position||'basketball player'}</strong>. Your full modules include a complete drill library, sets, reps, coaching cues, and a 4-week training schedule.</p>
+    <div class="drills-label">Sample drills</div>
+    ${drillsHtml}`;
+
+  document.getElementById('modules-block').innerHTML=
+    Object.entries(LOCKED).map(([key,m],i)=>`
+      <div class="module-card">
+        <div class="module-top">
+          <div><div class="module-num-tag">Module 0${i+1}</div><div class="module-title">${m.title}</div></div>
+          <div class="module-price-tag">$25</div>
+        </div>
+        <div class="module-desc">${m.desc}</div>
+        <div class="locked-overlay">
+          <div class="locked-icon">🔒</div>
+          <div class="locked-title">Unlock for $25</div>
+          <div class="locked-sub">Purchase this module to access your full drill library and training schedule.</div>
+          <div class="coming-btn">Coming Soon</div>
+        </div>
+      </div>`).join('');
 }
 
 function restart(){
   Object.keys(A).forEach(k=>delete A[k]);
   document.querySelectorAll('.option-btn').forEach(b=>b.classList.remove('selected'));
-  document.getElementById('zip-wrap').style.display='none';
-  document.getElementById('zip-in').value='';
   go(1);
-  document.getElementById('prog-label').textContent='Step 1 of 5';
-  document.getElementById('prog-fill').style.width='20%';
+  document.getElementById('prog-label').textContent='Step 1 of 4';
+  document.getElementById('prog-fill').style.width='25%';
 }
 </script>
 </body>
